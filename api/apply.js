@@ -1,11 +1,8 @@
-/* ============================================================
-   AMET CEII — application & contact intake  (Vercel Node function)
-   POST /api/apply  { kind, ...fields }
-   Emails aceii@ametuniv.ac.in via Resend when RESEND_API_KEY is set.
-   Fail-open guard: method + size + honeypot + best-effort per-IP rate limit.
-   Without a mail provider it responds 503 so the client shows the
-   "email us directly" fallback — it never pretends to have delivered.
-   ============================================================ */
+/* Handles the Apply form and the Contact form.
+   POST /api/apply with the form fields; if RESEND_API_KEY is set it
+   emails aceii@ametuniv.ac.in, otherwise it returns 503 and the page
+   asks the user to email us directly. Also does a few basic checks
+   (POST only, size limit, honeypot, simple rate limit) to keep spam out. */
 
 const MAX_BYTES = 12 * 1024;                 // 12 KB payload cap
 const RL_WINDOW_MS = 60 * 1000;

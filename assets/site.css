@@ -1,12 +1,8 @@
-/* ============================================================
-   AMET CEII — "The Harbour"
-   Bespoke maritime design system
-   Concept: oceanographic institute × top-tier venture studio
-   Static-first (reduced-motion safe); motion is enrichment only.
-   ============================================================ */
-
-/* ---- Fonts (self-describing; loaded in <head> via <link>) ---- */
-/* Display: Newsreader (editorial serif) · UI: Hanken Grotesk · Mono: IBM Plex Mono */
+/* AMET CEII website - main stylesheet
+   Fonts (loaded in each page head): Newsreader for headings,
+   Hanken Grotesk for text, IBM Plex Mono for small labels.
+   Dark ocean theme. Tried to keep it looking good even with
+   animations turned off. */
 
 :root {
   /* -- Depth palette (abyssal → surface) -- */

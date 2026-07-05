@@ -1,3 +1,7 @@
+# pitch deliverables — kept local, not published to the web repo
+pitch/*.pptx
+pitch/*.docx
+
 node_modules/
 .vercel/
 .DS_Store

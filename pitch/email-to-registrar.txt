@@ -1,0 +1,47 @@
+SUGGESTED EMAIL — to submit the proposal to the Registrar
+========================================================
+To:      registrar@ametuniv.ac.in        (please confirm the correct address)
+Cc:      aceii@ametuniv.ac.in
+Subject: Proposal — In-house Redesign & Maintenance of the AMET CEII Website (aceii.in)
+
+--------------------------------------------------------
+
+Respected Madam,
+
+We are a team of five third-year students of B.Sc. Artificial
+Intelligence and Machine Learning at AMET University. We would like to
+submit a proposal to redesign the website of the AMET Centre for
+Entrepreneurship, Innovation and Incubation (aceii.in) and to take over
+its ongoing maintenance in-house, as a student internship.
+
+The site is currently built and maintained by an external agency. We
+believe a student team — guided by the CEII and a faculty mentor — can
+deliver a modern, world-class redesign and maintain it at a fraction of
+the recurring cost, while gaining valuable industry experience.
+
+To show what we mean, we have already built a working prototype:
+
+    https://amet-ceii.vercel.app
+
+Please find attached:
+  1. AMET-CEII-Website-Redesign-Proposal.docx  — the full proposal
+  2. AMET-CEII-Pitch-Deck.pptx                 — a short pitch deck
+
+We would be very grateful for a few minutes of your time to present it
+in person and demonstrate the live prototype. We are happy to meet at
+your convenience.
+
+Thank you for considering our proposal.
+
+Yours sincerely,
+[ Student 1 ] — Team Lead
+[ Student 2 ], [ Student 3 ], [ Student 4 ], [ Student 5 ]
+B.Sc. Artificial Intelligence & Machine Learning (Third Year)
+AMET University
+[ contact phone / email ]
+
+--------------------------------------------------------
+Before sending, remember to:
+  - Fill in the five student names and a contact number/email.
+  - Confirm the Registrar's correct email address with the office.
+  - Attach the two files from this "pitch" folder.

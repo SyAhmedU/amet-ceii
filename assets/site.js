@@ -1,8 +1,7 @@
-/* ============================================================
-   AMET CEII — shared site runtime
-   Injects header + footer, wires interactions.
-   Reduced-motion aware: all count-ups restore VERBATIM final text.
-   ============================================================ */
+/* Shared script for every page.
+   Builds the top navigation bar and the footer so we only write them
+   once, and runs the small things: mobile menu, scroll reveals and the
+   number counters on the home page. */
 (function () {
   "use strict";
 
@@ -17,7 +16,7 @@
     { href: "blog.html",      label: "Journal" }
   ];
 
-  // Official AMET CEII crest (real logo pulled from aceii.in)
+  // AMET CEII logo
   var MARK = '<img src="assets/brand/ceii-logo.png" alt="AMET CEII logo" width="42" height="42">';
 
   function current() {

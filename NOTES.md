@@ -1,6 +1,11 @@
 # amet-ceii — NOTES
 
-Project 35. A ground-up redesign of **aceii.in** (AMET Centre for Entrepreneurship, Innovation & Incubation) as a world-class, maritime-themed incubation site. Standalone, NOT a research-suite surface.
+Project 35. A ground-up redesign of **aceii.in** (AMET Centre for Entrepreneurship, Innovation & Incubation). Standalone, NOT a research-suite surface.
+
+## Two design directions (the pitch proposes BOTH)
+- **Holistic** (root, `amet-ceii.vercel.app`) — the PRIMARY. CEII as the incubator for all 18 AMET departments; maritime is one strength among many. This is the de-maritimed copy.
+- **Maritime-focused** (`/maritime/`, self-contained copy under `maritime/`) — leans into AMET's maritime heritage / blue economy. Recovered from git commit `0ef1b43` (maritime copy + real data) into a subfolder with its own `assets/`.
+- A version-switcher pill (added in each `site.js`) cross-links the two. When editing shared design/behaviour, remember there are **two copies** of `site.css`/`site.js` (root + maritime/). Content copy differs; the design system is identical.
 
 ## Design concept — "The Harbour"
 Oceanographic-institute × top-tier venture studio. Deliberately **not** the Syed-fire suite look.

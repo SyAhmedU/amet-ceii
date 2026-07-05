@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — AMET CEII</title>
+  <meta name="description" content="The CEII fleet: blue-economy ventures across ocean-tech, logistics, aquaculture, coastal sustainability and marine services.">
+  <meta name="theme-color" content="#04101B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="atmosphere"></div>
+<div class="grain"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Portfolio</span>
+    <h1>The <span class="display-accent">fleet.</span></h1>
+    <p class="lede">Ventures charting new waters across the blue economy — from IoT buoys to port software to regenerative aquaculture.</p>
+  </div>
+</section>
+
+<div class="wrap"><p class="sample-banner">◇ Placeholder portfolio. Every venture below is a sample to demonstrate layout and taxonomy — real CEII companies will replace these. Nothing here is a real, endorsed company.</p></div>
+
+<section style="padding-top:clamp(16px,3vw,32px)">
+  <div class="wrap-wide">
+    <div class="filters flex gap-s wrap-flex" style="margin-bottom:34px" data-reveal>
+      <button class="pill filter-btn is-on" data-f="all">All</button>
+      <button class="pill filter-btn" data-f="ocean-tech">Ocean-tech</button>
+      <button class="pill filter-btn" data-f="logistics">Logistics &amp; ports</button>
+      <button class="pill filter-btn" data-f="aquaculture">Aquaculture</button>
+      <button class="pill filter-btn" data-f="sustainability">Sustainability</button>
+      <button class="pill filter-btn" data-f="services">Marine services</button>
+    </div>
+
+    <div class="grid cols-3" id="fleet" data-reveal-stagger>
+      <div class="card" data-cat="ocean-tech"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Ocean-tech</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">TidalSense</h3><p>Low-cost IoT buoys giving small ports live tide, current and berth data.</p><span class="tag mono">Stage · Seed</span></div>
+      <div class="card" data-cat="logistics"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Logistics</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">HarbourFlow</h3><p>Cuts vessel turnaround by orchestrating cargo, pilots and cranes on one board.</p><span class="tag mono">Stage · Pilot</span></div>
+      <div class="card" data-cat="aquaculture"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Aquaculture</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">BlueHarvest</h3><p>Sensor-guided feed optimisation for coastal shrimp farms — more yield, less effluent.</p><span class="tag mono">Stage · Revenue</span></div>
+      <div class="card" data-cat="sustainability"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Sustainability</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">CoastGuardian</h3><p>Satellite + drone monitoring that flags coastal erosion and illegal discharge.</p><span class="tag mono">Stage · Incubation</span></div>
+      <div class="card" data-cat="ocean-tech"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Ocean-tech</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">HullMetric</h3><p>Ultrasonic hull-fouling sensors that tell operators exactly when to clean and save fuel.</p><span class="tag mono">Stage · Prototype</span></div>
+      <div class="card" data-cat="services"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Services</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">CrewBridge</h3><p>A hiring and welfare platform for seafarers, connecting crew to compliant employers.</p><span class="tag mono">Stage · Seed</span></div>
+      <div class="card" data-cat="logistics"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Ports</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">Berth&amp;Beyond</h3><p>A booking layer for small fishing harbours — slots, fees and manifests, digitised.</p><span class="tag mono">Stage · Pilot</span></div>
+      <div class="card" data-cat="sustainability"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Sustainability</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">SeaGrass Labs</h3><p>Blue-carbon credits from restored seagrass meadows, measured and verifiable.</p><span class="tag mono">Stage · Pre-incubation</span></div>
+      <div class="card" data-cat="aquaculture"><div class="flex items-center" style="justify-content:space-between"><span class="pill biolum">Aquaculture</span><span class="sample-flag">sample</span></div><h3 style="margin-top:14px">FinFresh</h3><p>Cold-chain traceability from catch to counter for coastal fisheries co-operatives.</p><span class="tag mono">Stage · Revenue</span></div>
+    </div>
+    <p id="empty" class="center text-mist" style="display:none; padding:40px 0">No ventures in this category yet.</p>
+  </div>
+</section>
+
+<section style="padding-top:clamp(24px,4vw,48px)"><div class="wrap center"><h2 data-reveal>Your venture could be next.</h2><div class="flex gap-s" style="justify-content:center;margin-top:26px;flex-wrap:wrap" data-reveal><a class="btn btn-primary" href="apply.html">Apply to join →</a></div></div></section>
+
+<style>
+  .filter-btn { cursor:pointer; font-family:var(--mono); }
+  .filter-btn.is-on { color:var(--biolum); border-color:rgba(52,228,206,.5); background:rgba(52,228,206,.08); }
+</style>
+<script>
+  (function(){
+    var btns = document.querySelectorAll(".filter-btn");
+    var cards = document.querySelectorAll("#fleet .card");
+    var empty = document.getElementById("empty");
+    btns.forEach(function(b){ b.addEventListener("click", function(){
+      btns.forEach(function(x){ x.classList.remove("is-on"); });
+      b.classList.add("is-on");
+      var f = b.getAttribute("data-f"), shown = 0;
+      cards.forEach(function(c){
+        var ok = f === "all" || c.getAttribute("data-cat") === f;
+        c.style.display = ok ? "" : "none";
+        if (ok) shown++;
+      });
+      empty.style.display = shown ? "none" : "block";
+    }); });
+  })();
+</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

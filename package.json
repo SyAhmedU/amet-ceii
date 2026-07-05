@@ -1,0 +1,11 @@
+{
+  "name": "amet-ceii",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AMET CEII — The Maritime Innovation Harbour. Redesigned site for the AMET Centre for Entrepreneurship, Innovation & Incubation.",
+  "scripts": {
+    "dev": "npx serve .",
+    "check": "node --check assets/site.js && node --check api/apply.js"
+  },
+  "license": "UNLICENSED"
+}

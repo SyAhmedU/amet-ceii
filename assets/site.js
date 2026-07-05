@@ -79,7 +79,7 @@
           '<div class="footer-brand">' +
             '<div class="brand"><span class="mark">' + MARK + '</span>' +
             '<span class="word"><b>AMET&nbsp;CEII</b><span class="coord">12.8339° N · 80.2436° E</span></span></div>' +
-            '<p>The maritime innovation harbour of AMET University — where blue-economy ventures find mentorship, capital, and open water.</p>' +
+            '<p>The Centre for Entrepreneurship, Innovation &amp; Incubation of AMET University — where ideas from every department find mentorship, capital and support.</p>' +
             '<div class="social" style="margin-top:22px">' +
               '<a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener" target="_blank">' + svgIcon("linkedin") + '</a>' +
               '<a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener" target="_blank">' + svgIcon("facebook") + '</a>' +

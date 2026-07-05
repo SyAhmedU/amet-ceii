@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply — AMET CEII</title>
+  <meta name="description" content="Apply to incubate your maritime venture at AMET CEII. A short, staged application — we reply within two weeks.">
+  <meta name="theme-color" content="#04101B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <style>
+    .stepper { display:flex; gap:8px; margin-bottom:34px; }
+    .stepper .seg { flex:1; height:3px; border-radius:3px; background:var(--line-strong); overflow:hidden; }
+    .stepper .seg.done, .stepper .seg.active { background:var(--grad-biolum); }
+    .step { display:none; } .step.on { display:block; }
+    .step-label { font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--biolum); margin-bottom:6px; }
+    .review-item { display:grid; grid-template-columns:.5fr 1fr; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
+    .review-item .k { font-family:var(--mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--haze); }
+    .review-item .v { color:var(--foam); }
+    .hp { position:absolute; left:-9999px; opacity:0; height:0; }
+    .success { text-align:center; padding:40px 0; }
+    .success .ring { width:96px;height:96px;margin:0 auto 24px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--biolum);box-shadow:var(--glow-biolum);font-size:2.4rem;color:var(--biolum); }
+  </style>
+</head>
+<body>
+<div class="atmosphere"></div>
+<div class="grain"></div>
+
+<section class="page-hero" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Apply</span>
+    <h1>Set sail with <span class="display-accent">CEII.</span></h1>
+    <p class="lede">A short, staged application — five minutes, no deck required. We read every one and reply within two weeks.</p>
+  </div>
+</section>
+
+<section style="padding-top:clamp(28px,5vw,52px)">
+  <div class="wrap" style="max-width:760px">
+    <div class="panel" style="padding:clamp(26px,4vw,44px)">
+
+      <div class="stepper" id="stepper">
+        <div class="seg active"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
+      </div>
+
+      <form id="apply-form" novalidate>
+        <!-- honeypot -->
+        <div class="hp"><label>Leave blank<input name="website_hp" tabindex="-1" autocomplete="off"></label></div>
+
+        <!-- Step 1 -->
+        <div class="step on" data-step="0">
+          <div class="step-label">Step 1 of 4 · The founder</div>
+          <h3 style="margin-bottom:22px">Who's at the helm?</h3>
+          <div class="grid cols-2">
+            <div class="field"><label>Full name <span class="req">*</span></label><input name="name" required placeholder="Your name"></div>
+            <div class="field"><label>Email <span class="req">*</span></label><input name="email" type="email" required placeholder="you@example.com"></div>
+          </div>
+          <div class="grid cols-2">
+            <div class="field"><label>Phone</label><input name="phone" placeholder="+91 …"></div>
+            <div class="field"><label>You are <span class="req">*</span></label>
+              <select name="applicant_type" required>
+                <option value="">Select…</option>
+                <option>Student at AMET</option><option>AMET alumni</option>
+                <option>External founder</option><option>Faculty / staff</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" data-step="1">
+          <div class="step-label">Step 2 of 4 · The venture</div>
+          <h3 style="margin-bottom:22px">Tell us about the venture</h3>
+          <div class="field"><label>Venture name <span class="req">*</span></label><input name="venture_name" required placeholder="Working name is fine"></div>
+          <div class="field"><label>One-line pitch <span class="req">*</span></label><input name="one_liner" required placeholder="We help ___ do ___ by ___"></div>
+          <div class="grid cols-2">
+            <div class="field"><label>Sector <span class="req">*</span></label>
+              <select name="sector" required>
+                <option value="">Select…</option>
+                <option>Ocean-tech</option><option>Logistics &amp; ports</option><option>Aquaculture &amp; fisheries</option>
+                <option>Coastal / marine sustainability</option><option>Marine services</option><option>Other blue economy</option>
+              </select>
+            </div>
+            <div class="field"><label>Stage <span class="req">*</span></label>
+              <select name="stage" required>
+                <option value="">Select…</option>
+                <option>Just an idea</option><option>Prototype built</option>
+                <option>Running a pilot</option><option>Earning revenue</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label>Website or link (optional)</label><input name="website" placeholder="https://…"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" data-step="2">
+          <div class="step-label">Step 3 of 4 · The detail</div>
+          <h3 style="margin-bottom:22px">Go a little deeper</h3>
+          <div class="field"><label>What problem are you solving? <span class="req">*</span></label><textarea name="problem" required placeholder="The pain, who feels it, and why now."></textarea></div>
+          <div class="field"><label>How is it tied to the blue economy? <span class="req">*</span></label><textarea name="maritime_relevance" required placeholder="Shipping, ports, ocean-tech, aquaculture, coastal…"></textarea></div>
+          <div class="field"><label>Who's on the team?</label><input name="team" placeholder="Founders and key people"></div>
+          <div class="field"><label>Which program fits? <span class="req">*</span></label>
+            <select name="program" required>
+              <option value="">Select…</option>
+              <option>Slipway (pre-incubation)</option><option>Drydock (incubation)</option>
+              <option>Open Sea (acceleration)</option><option>Not sure — advise me</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step" data-step="3">
+          <div class="step-label">Step 4 of 4 · Review</div>
+          <h3 style="margin-bottom:22px">Check your bearings</h3>
+          <div id="review"></div>
+          <p class="tag" style="margin-top:16px">By submitting you agree that CEII may contact you about your application.</p>
+        </div>
+
+        <!-- Nav -->
+        <div class="flex" style="justify-content:space-between; margin-top:30px; align-items:center">
+          <button type="button" class="btn btn-ghost" id="back" style="visibility:hidden">← Back</button>
+          <button type="button" class="btn btn-primary" id="next">Continue <span class="arrow">→</span></button>
+          <button type="submit" class="btn btn-primary" id="submit" style="display:none">Submit application <span class="arrow">→</span></button>
+        </div>
+        <p id="apply-status" class="mono center" style="font-size:.82rem; margin-top:18px; min-height:20px"></p>
+      </form>
+
+      <!-- Success -->
+      <div id="success" class="success" style="display:none">
+        <div class="ring">✓</div>
+        <h2>Application received</h2>
+        <p class="lede mx-auto" style="text-align:center; margin-top:14px">Thank you — your application is with the CEII crew. We reply within two weeks. Keep an eye on your inbox.</p>
+        <div class="flex gap-s" style="justify-content:center; margin-top:28px; flex-wrap:wrap">
+          <a class="btn btn-ghost" href="index.html">Back to harbour</a>
+          <a class="btn btn-ghost" href="programs.html">Explore programs</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var form = document.getElementById("apply-form");
+    var steps = Array.prototype.slice.call(form.querySelectorAll(".step"));
+    var segs = Array.prototype.slice.call(document.querySelectorAll("#stepper .seg"));
+    var back = document.getElementById("back"), next = document.getElementById("next"), submit = document.getElementById("submit");
+    var review = document.getElementById("review"), status = document.getElementById("apply-status");
+    var i = 0;
+
+    var LABELS = { name:"Name", email:"Email", phone:"Phone", applicant_type:"You are", venture_name:"Venture", one_liner:"Pitch", sector:"Sector", stage:"Stage", website:"Link", problem:"Problem", maritime_relevance:"Blue-economy tie", team:"Team", program:"Program" };
+
+    function show(n){
+      steps.forEach(function(s,x){ s.classList.toggle("on", x===n); });
+      segs.forEach(function(s,x){ s.classList.toggle("done", x<n); s.classList.toggle("active", x===n); });
+      back.style.visibility = n===0 ? "hidden" : "visible";
+      next.style.display = n===steps.length-1 ? "none" : "inline-flex";
+      submit.style.display = n===steps.length-1 ? "inline-flex" : "none";
+      if(n===steps.length-1) buildReview();
+      status.textContent="";
+      window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 90, behavior: "smooth" });
+    }
+
+    function validateStep(n){
+      var reqs = steps[n].querySelectorAll("[required]");
+      for(var k=0;k<reqs.length;k++){
+        var el = reqs[k];
+        if(!el.value.trim() || (el.type==="email" && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value))){
+          el.focus(); el.style.borderColor="var(--coral)";
+          status.style.color="var(--coral)"; status.textContent="Please complete the highlighted field.";
+          setTimeout(function(){ el.style.borderColor=""; }, 1800);
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function buildReview(){
+      var data = Object.fromEntries(new FormData(form).entries());
+      var html="";
+      Object.keys(LABELS).forEach(function(key){
+        if(data[key] && data[key].trim()){
+          html += '<div class="review-item"><div class="k">'+LABELS[key]+'</div><div class="v">'+
+            data[key].replace(/</g,"&lt;")+'</div></div>';
+        }
+      });
+      review.innerHTML = html;
+    }
+
+    next.addEventListener("click", function(){ if(validateStep(i)){ i++; show(i); } });
+    back.addEventListener("click", function(){ i--; show(i); });
+
+    form.addEventListener("submit", async function(e){
+      e.preventDefault();
+      if(!validateStep(i)) return;
+      submit.disabled=true; status.style.color="var(--mist)"; status.textContent="Submitting…";
+      var data = Object.fromEntries(new FormData(form).entries());
+      data.kind = "application";
+      try{
+        var r = await fetch("/api/apply", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(data) });
+        if(r.ok){
+          form.style.display="none"; document.getElementById("stepper").style.display="none";
+          document.getElementById("success").style.display="block";
+          window.scrollTo({ top: 0, behavior:"smooth" });
+        } else {
+          var j = await r.json().catch(function(){return{};});
+          throw new Error(j.error||"Failed");
+        }
+      }catch(err){
+        submit.disabled=false; status.style.color="var(--brass)";
+        status.innerHTML='Couldn\'t submit online just now. Please email your application to <a href="mailto:aceii@ametuniv.ac.in">aceii@ametuniv.ac.in</a>.';
+      }
+    });
+  })();
+</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

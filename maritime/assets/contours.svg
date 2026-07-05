@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" fill="none">
+  <g stroke="#2b6b82" stroke-width="1" opacity="0.55" fill="none">
+    <path d="M-40 120 C 200 60, 380 180, 560 140 S 900 40, 1120 130 S 1360 210, 1460 160"/>
+    <path d="M-40 190 C 220 130, 400 250, 600 210 S 940 110, 1160 200 S 1380 270, 1460 230"/>
+    <path d="M-40 270 C 240 210, 430 330, 640 300 S 980 200, 1200 290 S 1400 350, 1460 320"/>
+    <path d="M-40 360 C 260 300, 470 420, 700 400 S 1020 300, 1240 390 S 1420 440, 1460 420"/>
+    <path d="M-40 460 C 300 400, 520 520, 760 510 S 1080 410, 1290 500 S 1440 540, 1460 530"/>
+    <path d="M-40 570 C 320 520, 560 630, 820 630 S 1120 540, 1330 620 S 1450 650, 1460 650"/>
+    <path d="M-40 690 C 360 650, 620 750, 880 760 S 1180 690, 1360 760 S 1450 780, 1460 780"/>
+    <path d="M-40 820 C 400 790, 680 880, 940 900 S 1240 850, 1400 910 S 1460 920, 1460 920"/>
+  </g>
+  <!-- closed depth pools -->
+  <g stroke="#3a8aa6" stroke-width="1" opacity="0.4" fill="none">
+    <ellipse cx="1000" cy="360" rx="150" ry="80" transform="rotate(-12 1000 360)"/>
+    <ellipse cx="1000" cy="360" rx="105" ry="52" transform="rotate(-12 1000 360)"/>
+    <ellipse cx="1000" cy="360" rx="62" ry="28" transform="rotate(-12 1000 360)"/>
+    <ellipse cx="300" cy="640" rx="120" ry="66" transform="rotate(8 300 640)"/>
+    <ellipse cx="300" cy="640" rx="78" ry="40" transform="rotate(8 300 640)"/>
+    <ellipse cx="300" cy="640" rx="40" ry="18" transform="rotate(8 300 640)"/>
+  </g>
+  <!-- soundings (depth dots) -->
+  <g fill="#4aa0bd" opacity="0.35">
+    <circle cx="520" cy="300" r="1.6"/><circle cx="740" cy="250" r="1.6"/>
+    <circle cx="900" cy="520" r="1.6"/><circle cx="260" cy="420" r="1.6"/>
+    <circle cx="1120" cy="600" r="1.6"/><circle cx="640" cy="720" r="1.6"/>
+    <circle cx="420" cy="560" r="1.6"/><circle cx="980" cy="740" r="1.6"/>
+  </g>
+</svg>

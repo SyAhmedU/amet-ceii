@@ -79,7 +79,7 @@
           '<div class="footer-brand">' +
             '<div class="brand"><span class="mark">' + MARK + '</span>' +
             '<span class="word"><b>AMET&nbsp;CEII</b><span class="coord">12.8339° N · 80.2436° E</span></span></div>' +
-            '<p>The Centre for Entrepreneurship, Innovation &amp; Incubation of AMET University — where ideas from every department find mentorship, capital and support.</p>' +
+            '<p>The maritime innovation harbour of AMET University — where blue-economy ventures find mentorship, capital, and open water.</p>' +
             '<div class="social" style="margin-top:22px">' +
               '<a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener" target="_blank">' + svgIcon("linkedin") + '</a>' +
               '<a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener" target="_blank">' + svgIcon("facebook") + '</a>' +
@@ -116,9 +116,9 @@
 
     // Link to the alternate design direction (two-site proposal)
     var vs = document.createElement("a");
-    vs.href = "maritime/index.html";
-    vs.textContent = "⚓ Maritime-focused version →";
-    vs.setAttribute("style", "position:fixed;left:16px;bottom:16px;z-index:120;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:#34E4CE;background:rgba(7,26,41,.92);border:1px solid rgba(52,228,206,.4);padding:.55em .9em;border-radius:100px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-decoration:none;box-shadow:0 8px 24px -10px rgba(0,0,0,.6)");
+    vs.href = "../index.html";
+    vs.textContent = "◆ Holistic version →";
+    vs.setAttribute("style", "position:fixed;left:16px;bottom:16px;z-index:120;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:#E6B871;background:rgba(7,26,41,.92);border:1px solid rgba(230,184,113,.4);padding:.55em .9em;border-radius:100px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-decoration:none;box-shadow:0 8px 24px -10px rgba(0,0,0,.6)");
     document.body.appendChild(vs);
 
     // Mobile toggle

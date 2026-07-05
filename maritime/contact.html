@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — AMET CEII</title>
+  <meta name="description" content="Reach the AMET CEII team — email, phone, campus address at Kanathur, Chennai, and a direct message form.">
+  <meta name="theme-color" content="#04101B">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="atmosphere"></div>
+<div class="grain"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="breadcrumb"><a href="index.html">Home</a> / Contact</span>
+    <h1>Signal the <span class="display-accent">harbour.</span></h1>
+    <p class="lede">Questions, partnerships, mentoring or press — send word and the CEII team will reply.</p>
+  </div>
+</section>
+
+<section style="padding-top:clamp(20px,4vw,44px)">
+  <div class="wrap">
+    <div style="display:grid; grid-template-columns:.85fr 1.15fr; gap:48px; align-items:start">
+
+      <!-- Details -->
+      <div data-reveal>
+        <div class="card" style="margin-bottom:20px">
+          <h4 class="mono text-biolum" style="font-size:.72rem;letter-spacing:.14em">EMAIL</h4>
+          <a href="mailto:aceii@ametuniv.ac.in" style="font-size:1.1rem; display:block; margin-top:8px">aceii@ametuniv.ac.in</a>
+        </div>
+        <div class="card" style="margin-bottom:20px">
+          <h4 class="mono text-biolum" style="font-size:.72rem;letter-spacing:.14em">PHONE</h4>
+          <a href="tel:+919486303654" style="display:block; margin-top:8px">+91 94863 03654</a>
+          <a href="tel:+919629695776" style="display:block; margin-top:4px">+91 96296 95776</a>
+        </div>
+        <div class="card">
+          <h4 class="mono text-biolum" style="font-size:.72rem;letter-spacing:.14em">HARBOUR</h4>
+          <p style="margin-top:8px">AMET CEII, AMET University<br>135 SH 49, Kanathur Reddykuppam<br>Tamil Nadu 603112, India</p>
+          <p class="coord" style="margin-top:10px">12.8339° N · 80.2436° E</p>
+          <a class="btn btn-ghost" style="margin-top:16px" href="https://maps.google.com/?q=AMET+University+Kanathur" target="_blank" rel="noopener">Open in Maps ↗</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="panel" style="padding:clamp(26px,4vw,40px)" data-reveal>
+        <form id="contact-form" novalidate>
+          <input type="hidden" name="kind" value="contact">
+          <div class="grid cols-2">
+            <div class="field"><label>Name <span class="req">*</span></label><input name="name" required placeholder="Your name"></div>
+            <div class="field"><label>Email <span class="req">*</span></label><input name="email" type="email" required placeholder="you@example.com"></div>
+          </div>
+          <div class="field"><label>I'm reaching out as</label>
+            <select name="role">
+              <option>A founder / prospective applicant</option>
+              <option>A potential mentor or advisor</option>
+              <option>An investor</option>
+              <option>An industry / port partner</option>
+              <option>Press / media</option>
+              <option>Student at AMET</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Message <span class="req">*</span></label><textarea name="message" required placeholder="Tell us what's on your mind…"></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%; justify-content:center">Send message <span class="arrow">→</span></button>
+          <p id="form-status" class="mono" style="font-size:.82rem; margin-top:16px; min-height:20px"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var form = document.getElementById("contact-form");
+    var status = document.getElementById("form-status");
+    form.addEventListener("submit", async function(e){
+      e.preventDefault();
+      var data = Object.fromEntries(new FormData(form).entries());
+      if(!data.name || !data.email || !data.message){ status.style.color="var(--coral)"; status.textContent="Please fill in the required fields."; return; }
+      status.style.color="var(--mist)"; status.textContent="Sending…";
+      try{
+        var r = await fetch("/api/apply", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(data) });
+        if(r.ok){ status.style.color="var(--biolum)"; status.textContent="✓ Message sent — we'll be in touch soon."; form.reset(); }
+        else { var j = await r.json().catch(function(){return{};}); throw new Error(j.error || "Failed"); }
+      }catch(err){
+        status.style.color="var(--brass)";
+        status.innerHTML='Couldn\'t send just now. Please email <a href="mailto:aceii@ametuniv.ac.in">aceii@ametuniv.ac.in</a> directly.';
+      }
+    });
+  })();
+</script>
+<style>@media(max-width:820px){section > .wrap > div[style*="grid-template-columns"]{grid-template-columns:1fr !important}}</style>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -118,7 +118,7 @@
     var vs = document.createElement("a");
     vs.href = "maritime/index.html";
     vs.textContent = "⚓ Maritime-focused version →";
-    vs.setAttribute("style", "position:fixed;left:16px;bottom:16px;z-index:120;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:#34E4CE;background:rgba(7,26,41,.92);border:1px solid rgba(52,228,206,.4);padding:.55em .9em;border-radius:100px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-decoration:none;box-shadow:0 8px 24px -10px rgba(0,0,0,.6)");
+    vs.setAttribute("style", "position:fixed;left:16px;bottom:16px;z-index:120;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:#4838D1;background:#fff;border:1px solid rgba(72,56,209,.35);padding:.55em .9em;border-radius:100px;text-decoration:none;box-shadow:0 8px 24px -10px rgba(20,20,30,.28)");
     document.body.appendChild(vs);
 
     // Mobile toggle

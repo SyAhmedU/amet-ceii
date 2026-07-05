@@ -11,24 +11,35 @@ Respected Madam,
 We are a team of five third-year students of B.Sc. Artificial
 Intelligence and Machine Learning at AMET University. We would like to
 submit a proposal to redesign the website of the AMET Centre for
-Entrepreneurship, Innovation and Incubation (aceii.in) and to take over
-its ongoing maintenance in-house, as a student internship.
+Entrepreneurship, Innovation and Incubation (aceii.in) and to maintain
+it in-house, as a student internship.
 
 The site is currently built and maintained by an external agency. We
 believe a student team — guided by the CEII and a faculty mentor — can
 deliver a modern, world-class redesign and maintain it at a fraction of
 the recurring cost, while gaining valuable industry experience.
 
-To show what we mean, we have already built a working prototype:
+To show what we mean, we have already built TWO complete, live design
+directions, so the university can choose the identity it prefers:
 
-    https://amet-ceii.vercel.app
+  • Holistic  (for all 18 departments) — https://amet-ceii.vercel.app
+  • Maritime-focused (AMET's maritime edge) — https://amet-ceii.vercel.app/maritime
+
+You can switch between the two from a link on each page.
+
+Proposed timeline (about 8 weeks to launch, then ongoing upkeep):
+  • Phase 1 (Weeks 1-3): approval, content gathering, finalise design
+  • Phase 2 (Weeks 3-6): build all pages, migrate real content, set up email
+  • Phase 3 (Weeks 6-7): review & testing with the CEII team
+  • Phase 4 (Week 8):    launch / domain cut-over to aceii.in
+  • Phase 5 (ongoing):   in-house maintenance & improvements
 
 Please find attached:
   1. AMET-CEII-Website-Redesign-Proposal.docx  — the full proposal
   2. AMET-CEII-Pitch-Deck.pptx                 — a short pitch deck
 
 We would be very grateful for a few minutes of your time to present it
-in person and demonstrate the live prototype. We are happy to meet at
+in person and demonstrate the live prototypes. We are happy to meet at
 your convenience.
 
 Thank you for considering our proposal.

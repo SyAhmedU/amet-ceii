@@ -22,11 +22,11 @@
 <!-- ============================== HERO ============================== -->
 <section class="hero" style="padding-block: clamp(56px,9vw,104px) clamp(48px,7vw,88px)">
   <div class="wrap-wide">
-    <div style="display:grid; grid-template-columns: 1.15fr .85fr; gap:48px; align-items:center">
-      <div class="hero-copy">
+    <div style="display:grid; grid-template-columns: 1.1fr .9fr; gap:clamp(32px,5vw,64px); align-items:center">
+      <div class="hero-copy" data-reveal>
         <span class="eyebrow">AMET University · Chennai, India</span>
-        <h1 style="margin:22px 0 24px">Where campus ideas<br>become <span class="display-accent">companies.</span></h1>
-        <p class="lede">The AMET Centre for Entrepreneurship, Innovation &amp; Incubation backs student and faculty founders from across every department at AMET University — engineering, management, computer science, the sciences and its distinctive maritime strengths — with mentorship, capital and lab access.</p>
+        <h1 style="margin:22px 0 22px">Where campus ideas<br>become <span class="display-accent">companies.</span></h1>
+        <p class="lede">We help students and faculty from every AMET department turn ideas into companies — with mentorship, funding and lab access.</p>
         <div class="flex gap-s wrap-flex" style="margin-top:34px">
           <a class="btn btn-primary" href="apply.html">Apply to incubate <span class="arrow">→</span></a>
           <a class="btn btn-ghost" href="programs.html">Explore programs</a>
@@ -38,41 +38,31 @@
         </div>
       </div>
 
-      <!-- Instrument: sonar + compass -->
-      <div class="hero-instrument" aria-hidden="true">
-        <svg viewBox="0 0 400 400" width="100%" style="max-width:440px; margin-inline:auto; display:block">
+      <!-- Minimal growth visual (idea → company) -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 340" width="100%" style="max-width:460px; margin-inline:auto; display:block">
           <defs>
-            <radialGradient id="g1" cx="50%" cy="45%" r="60%">
-              <stop offset="0%" stop-color="#0e3145"/><stop offset="100%" stop-color="#061622"/>
-            </radialGradient>
-            <linearGradient id="needle" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#34E4CE"/><stop offset="100%" stop-color="#58AEEA"/>
+            <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#4838D1" stop-opacity=".18"/><stop offset="100%" stop-color="#4838D1"/>
+            </linearGradient>
+            <linearGradient id="trend" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#E8703A"/><stop offset="100%" stop-color="#4838D1"/>
             </linearGradient>
           </defs>
-          <circle cx="200" cy="200" r="185" fill="url(#g1)" stroke="rgba(150,200,220,.18)"/>
-          <g class="sonar-rings" fill="none" stroke="#34E4CE">
-            <circle cx="200" cy="200" r="60"  stroke-opacity=".5"/>
-            <circle cx="200" cy="200" r="105" stroke-opacity=".3"/>
-            <circle cx="200" cy="200" r="150" stroke-opacity=".18"/>
+          <circle cx="332" cy="66" r="54" fill="#E8703A" opacity=".10"/>
+          <circle cx="66" cy="250" r="72" fill="#4838D1" opacity=".07"/>
+          <line x1="40" y1="300" x2="380" y2="300" stroke="rgba(20,20,30,.12)"/>
+          <rect x="60"  y="230" width="44" height="70"  rx="11" fill="url(#bar)"/>
+          <rect x="132" y="185" width="44" height="115" rx="11" fill="url(#bar)"/>
+          <rect x="204" y="138" width="44" height="162" rx="11" fill="url(#bar)"/>
+          <rect x="276" y="80"  width="44" height="220" rx="11" fill="url(#bar)"/>
+          <path d="M60 250 L154 200 L226 152 L322 70" fill="none" stroke="url(#trend)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="60"  cy="250" r="5.5" fill="#E8703A"/>
+          <circle cx="322" cy="70"  r="6.5" fill="#4838D1"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#8A8A93" letter-spacing="1">
+            <text x="52" y="326">idea</text>
+            <text x="286" y="326">company</text>
           </g>
-          <!-- graticule -->
-          <g stroke="rgba(150,200,220,.16)" stroke-width="1">
-            <line x1="200" y1="30" x2="200" y2="370"/>
-            <line x1="30" y1="200" x2="370" y2="200"/>
-            <line x1="72" y1="72" x2="328" y2="328"/>
-            <line x1="328" y1="72" x2="72" y2="328"/>
-          </g>
-          <!-- plotted route -->
-          <path d="M92 300 Q170 200 210 210 T318 108" fill="none" stroke="url(#needle)" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round"/>
-          <circle cx="92" cy="300" r="4" fill="#E6B871"/>
-          <circle cx="318" cy="108" r="5" fill="#34E4CE"/>
-          <!-- compass rose -->
-          <g transform="translate(200,200)">
-            <path d="M0 -46 L9 0 L0 46 L-9 0 Z" fill="url(#needle)" opacity=".9"/>
-            <path d="M-46 0 L0 9 L46 0 L0 -9 Z" fill="rgba(230,184,113,.7)"/>
-            <circle r="6" fill="#04101B" stroke="#34E4CE" stroke-width="1.5"/>
-          </g>
-          <text x="200" y="26" text-anchor="middle" fill="#A9C2CE" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2">N</text>
         </svg>
       </div>
     </div>
@@ -258,15 +248,10 @@
 </section>
 
 <style>
-  .hero-instrument { position: relative; }
-  .sonar-cta { position:absolute; inset:0; background: radial-gradient(300px 200px at 50% 40%, rgba(52,228,206,.10), transparent 70%); }
-  @media (prefers-reduced-motion: no-preference) {
-    .sonar-rings circle { transform-origin: 200px 200px; }
-    .hero-instrument svg { animation: drift 14s ease-in-out infinite; }
-  }
+  .sonar-cta { position:absolute; inset:0; background: radial-gradient(340px 220px at 50% 25%, rgba(72,56,209,.07), transparent 70%); }
   @media (max-width: 880px) {
     .hero .wrap-wide > div { grid-template-columns: 1fr !important; }
-    .hero-instrument { order: -1; max-width: 320px; }
+    .hero-visual { order: -1; max-width: 360px; }
     section > .wrap > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   }
 </style>

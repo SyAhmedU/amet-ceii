@@ -14,11 +14,13 @@
   <style>
     .person { text-align:center; }
     .avatar {
-      width:96px; height:96px; margin:0 auto 18px; border-radius:50%;
+      width:104px; height:104px; margin:0 auto 18px; border-radius:50%;
       display:grid; place-items:center; font-family:var(--serif); font-size:2rem; color:var(--biolum);
       background:radial-gradient(120% 120% at 30% 20%, var(--shoal), var(--deep));
       border:1px solid var(--line-strong); box-shadow: inset 0 0 24px rgba(52,228,206,.18);
+      overflow:hidden;
     }
+    .avatar img { width:100%; height:100%; object-fit:cover; }
     .person h3 { font-size:1.35rem; }
     .person .role { font-family:var(--mono); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; color:var(--biolum); margin-top:8px; }
     .mentor-avatar { width:64px;height:64px;font-size:1.3rem;margin-bottom:14px; }
@@ -44,23 +46,39 @@
     <div class="section-head" data-reveal><span class="eyebrow">Core team</span><h2>Steering CEII day to day</h2></div>
     <div class="grid cols-3" data-reveal-stagger>
       <div class="card person">
-        <div class="avatar">NR</div>
+        <div class="avatar"><img src="assets/brand/nirmalraj.jpg" alt="Mr. G. Nirmal Raj"></div>
         <h3>Mr. G. Nirmal Raj</h3>
-        <div class="role">Chief Executive Officer</div>
+        <div class="role">Chief Executive Officer · AMET CEII</div>
         <p style="margin-top:14px; font-size:.95rem">Leads CEII's strategy, partnerships and cohort operations — the founder's first port of call.</p>
       </div>
       <div class="card person">
-        <div class="avatar">AR</div>
+        <div class="avatar"><img src="assets/brand/anitha.jpg" alt="Dr. Anitha Rexalin Devaraj"></div>
         <h3>Dr. Anitha Rexalin Devaraj</h3>
-        <div class="role">Director · IIC</div>
+        <div class="role">Director · AMET-IIC</div>
         <p style="margin-top:14px; font-size:.95rem">Directs the Institution's Innovation Council, feeding campus energy and student ventures into the pipeline.</p>
       </div>
       <div class="card person">
-        <div class="avatar">VV</div>
+        <div class="avatar"><img src="assets/brand/velavan.jpg" alt="Mr. V. Velavan"></div>
         <h3>Mr. V. Velavan</h3>
-        <div class="role">Incubation Associate</div>
+        <div class="role">Incubation Associate · AMET CEII</div>
         <p style="margin-top:14px; font-size:.95rem">Runs incubation logistics and founder support — the person who keeps the harbour running smoothly.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- University leadership (REAL, from AMET University) -->
+<section style="padding-top:0">
+  <div class="wrap-wide">
+    <div class="section-head" data-reveal><span class="eyebrow">Under the aegis of AMET University</span><h2>University leadership</h2></div>
+    <div class="grid cols-4" data-reveal-stagger>
+      <div class="card person"><div class="avatar mentor-avatar">JR</div><h3 style="font-size:1.05rem">Dr. J. Ramachandran</h3><div class="role">Chancellor</div></div>
+      <div class="card person"><div class="avatar mentor-avatar">RR</div><h3 style="font-size:1.05rem">Dr. Rajesh Ramachandran</h3><div class="role">President</div></div>
+      <div class="card person"><div class="avatar mentor-avatar">GT</div><h3 style="font-size:1.05rem">Col. Dr. G. Thiruvasagam</h3><div class="role">Provost</div></div>
+      <div class="card person"><div class="avatar mentor-avatar">DR</div><h3 style="font-size:1.05rem">Dr. Deepa Rajesh</h3><div class="role">Vice President (Academics)</div></div>
+      <div class="card person"><div class="avatar mentor-avatar">VR</div><h3 style="font-size:1.05rem">Dr. V. Rajendran</h3><div class="role">Vice Chancellor</div></div>
+      <div class="card person"><div class="avatar mentor-avatar">SA</div><h3 style="font-size:1.05rem">Dr. V. Sangeetha Albin</h3><div class="role">Registrar</div></div>
+      <div class="card person"><div class="avatar mentor-avatar">JP</div><h3 style="font-size:1.05rem">Dr. M. Jayaprakashvel</h3><div class="role">IQAC Coordinator</div></div>
     </div>
   </div>
 </section>

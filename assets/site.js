@@ -17,12 +17,8 @@
     { href: "blog.html",      label: "Journal" }
   ];
 
-  var MARK = '<svg viewBox="0 0 24 24" fill="none" stroke="#34E4CE" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-    '<circle cx="12" cy="12" r="9"/>' +
-    '<path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>' +
-    '<path d="M12 7.5l2.4 4.5-2.4 4.5-2.4-4.5z" fill="#34E4CE" fill-opacity=".25"/>' +
-    '<circle cx="12" cy="12" r="1.3" fill="#E6B871" stroke="none"/>' +
-    '</svg>';
+  // Official AMET CEII crest (real logo pulled from aceii.in)
+  var MARK = '<img src="assets/brand/ceii-logo.png" alt="AMET CEII logo" width="42" height="42">';
 
   function current() {
     var p = location.pathname.split("/").pop();
@@ -102,7 +98,7 @@
             '<a href="mailto:aceii@ametuniv.ac.in">aceii@ametuniv.ac.in</a>' +
             '<a href="tel:+919486303654">+91 94863 03654</a>' +
             '<a href="tel:+919629695776">+91 96296 95776</a>' +
-            '<a href="https://maps.google.com/?q=AMET+University+Kanathur" target="_blank" rel="noopener">135 SH 49, Kanathur,<br>Tamil Nadu 603112</a>' +
+            '<a href="https://maps.google.com/?q=AMET+University+Kanathur" target="_blank" rel="noopener">135, SH 49, Kanathur Reddykuppam,<br>Tamil Nadu 603112</a>' +
           '</div>' +
         '</div>' +
         '<div class="footer-bottom">' +

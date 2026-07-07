@@ -231,6 +231,59 @@
   </div>
 </section>
 
+<!-- ============================== FIND YOUR FIT (reciprocity) ============================== -->
+<!-- Give real value before asking for anything: one tap returns a genuine
+     program recommendation with no sign-up, then carries that choice straight
+     into the application (pre-filled). Reciprocity + a smart-default hand-off
+     + endowment — and it turns a cold "Apply" into a warm, guided first step.
+     Deterministic stage→program map, so nothing is fabricated. -->
+<section>
+  <div class="wrap">
+    <div class="panel" style="padding: clamp(30px,5vw,56px); position:relative; overflow:hidden" data-reveal id="fit">
+      <span class="eyebrow no-rule">30-second check · no sign-up</span>
+      <h2 style="margin:16px 0 10px; max-width:24ch">Not sure where you'd start? Find out in one tap.</h2>
+      <p class="lede" style="max-width:56ch">Tell us where your idea is today and we'll point you to the program that fits — then carry your answer into the application. No email, no commitment.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:26px" id="fit-q">
+        <button type="button" class="btn btn-ghost fit-opt" data-stage="Just an idea"   data-program="Ideate (pre-incubation)">Just an idea</button>
+        <button type="button" class="btn btn-ghost fit-opt" data-stage="Prototype built" data-program="Incubate (incubation)">Prototype built</button>
+        <button type="button" class="btn btn-ghost fit-opt" data-stage="Running a pilot" data-program="Incubate (incubation)">Running a pilot</button>
+        <button type="button" class="btn btn-ghost fit-opt" data-stage="Earning revenue" data-program="Accelerate (acceleration)">Earning revenue</button>
+      </div>
+      <div id="fit-result" style="display:none; margin-top:26px"></div>
+    </div>
+  </div>
+</section>
+<script>
+  (function(){
+    var opts = Array.prototype.slice.call(document.querySelectorAll(".fit-opt"));
+    var out = document.getElementById("fit-result");
+    if(!out) return;
+    var WHY = {
+      "Ideate (pre-incubation)": "An 8-week sprint to validate the idea, find problem-fit and build a first prototype — open to any discipline.",
+      "Incubate (incubation)":   "Six months of mentorship, lab access and industry pilots to turn your prototype into a real product.",
+      "Accelerate (acceleration)":"Investor readiness, go-to-market and warm introductions to the capital network to help you scale."
+    };
+    opts.forEach(function(b){
+      b.addEventListener("click", function(){
+        opts.forEach(function(x){ x.classList.remove("btn-primary"); x.classList.add("btn-ghost"); });
+        b.classList.remove("btn-ghost"); b.classList.add("btn-primary");
+        var stage = b.getAttribute("data-stage"), prog = b.getAttribute("data-program");
+        var name = prog.split(" (")[0];
+        out.innerHTML =
+          '<div style="border:1px solid var(--line-strong); border-radius:14px; padding:clamp(20px,3vw,28px)">'
+          + '<span class="mono" style="font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--biolum)">Your starting point</span>'
+          + '<h3 style="margin:8px 0 8px; font-size:1.5rem">' + name + '</h3>'
+          + '<p style="margin-bottom:20px; max-width:60ch">' + WHY[prog] + '</p>'
+          + '<a class="btn btn-primary" href="apply.html?stage=' + encodeURIComponent(stage) + '&program=' + encodeURIComponent(prog) + '">'
+          + 'Apply to ' + name + ' — your answer’s already filled in <span class="arrow">→</span></a>'
+          + '</div>';
+        out.style.display = "block";
+        out.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    });
+  })();
+</script>
+
 <!-- ============================== CTA ============================== -->
 <section>
   <div class="wrap">

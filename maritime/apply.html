@@ -41,8 +41,21 @@
   <div class="wrap" style="max-width:760px">
     <div class="panel" style="padding:clamp(26px,4vw,44px)">
 
+      <div class="stepper-head" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px">
+        <span class="mono" style="font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--haze)">Application progress</span>
+        <!-- Endowed-progress / goal-gradient: opens at 20%, never 0 — starting
+             the form is itself a first step. Submit completes the last 20%. -->
+        <span class="mono" id="apply-pct" style="font-size:.72rem; letter-spacing:.1em; color:var(--biolum)">20% — you've started</span>
+      </div>
       <div class="stepper" id="stepper">
         <div class="seg active"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
+      </div>
+
+      <!-- Give-before-you-ask: name the value they get for applying up-front. -->
+      <div class="apply-promise" style="display:flex; flex-wrap:wrap; gap:8px 18px; margin-bottom:26px; font-size:.82rem; color:var(--mist)">
+        <span>✓ A real person reads every application</span>
+        <span>✓ We reply within two weeks</span>
+        <span>✓ Fit founders get a mentor + the right program</span>
       </div>
 
       <form id="apply-form" novalidate>
@@ -101,11 +114,12 @@
           <div class="field"><label>What problem are you solving? <span class="req">*</span></label><textarea name="problem" required placeholder="The pain, who feels it, and why now."></textarea></div>
           <div class="field"><label>How is it tied to the blue economy? <span class="req">*</span></label><textarea name="maritime_relevance" required placeholder="Shipping, ports, ocean-tech, aquaculture, coastal…"></textarea></div>
           <div class="field"><label>Who's on the team?</label><input name="team" placeholder="Founders and key people"></div>
-          <div class="field"><label>Which program fits? <span class="req">*</span></label>
-            <select name="program" required>
-              <option value="">Select…</option>
+          <div class="field"><label>Which program fits?</label>
+            <!-- Smart default: "Not sure — advise me" pre-selected (safe, low-
+                 commitment); a homepage stage→program hand-off overrides it. -->
+            <select name="program">
               <option>Slipway (pre-incubation)</option><option>Drydock (incubation)</option>
-              <option>Open Sea (acceleration)</option><option>Not sure — advise me</option>
+              <option>Open Sea (acceleration)</option><option selected>Not sure — advise me</option>
             </select>
           </div>
         </div>
@@ -152,6 +166,23 @@
     var i = 0;
 
     var LABELS = { name:"Name", email:"Email", phone:"Phone", applicant_type:"You are", venture_name:"Venture", one_liner:"Pitch", sector:"Sector", stage:"Stage", website:"Link", problem:"Problem", maritime_relevance:"Blue-economy tie", team:"Team", program:"Program" };
+    var pctEl = document.getElementById("apply-pct");
+
+    // Hand-off from the homepage "find your starting point" check: a carried
+    // stage/program/sector arrives pre-filled, so the founder confirms rather
+    // than re-decides (endowment + one fewer blank).
+    (function(){
+      try{
+        var q = new URLSearchParams(location.search);
+        ["applicant_type","sector","stage","program"].forEach(function(key){
+          var v = q.get(key); if(!v) return;
+          var el = form.querySelector('[name="'+key+'"]'); if(!el || !el.options) return;
+          for(var o=0;o<el.options.length;o++){
+            if(el.options[o].value.toLowerCase() === v.toLowerCase()){ el.selectedIndex=o; break; }
+          }
+        });
+      }catch(e){}
+    })();
 
     function show(n){
       steps.forEach(function(s,x){ s.classList.toggle("on", x===n); });
@@ -159,6 +190,12 @@
       back.style.visibility = n===0 ? "hidden" : "visible";
       next.style.display = n===steps.length-1 ? "none" : "inline-flex";
       submit.style.display = n===steps.length-1 ? "inline-flex" : "none";
+      if(pctEl){
+        var pct = Math.round((n+1)/(steps.length+1)*100);
+        pctEl.textContent = n===0 ? "20% — you've started"
+          : n===steps.length-1 ? "80% — last step, then submit"
+          : pct + "% complete";
+      }
       if(n===steps.length-1) buildReview();
       status.textContent="";
       window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 90, behavior: "smooth" });

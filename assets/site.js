@@ -200,3 +200,27 @@
     document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = "2026"; });
   });
 })();
+
+// SYED-CONCEPT · "Harbour Deeper": scrolling is a dive — the atmosphere deepens
+// and a mono gauge tracks the descent. Purely decorative; static-first intact.
+(function () {
+  var atmo = document.querySelector('.atmosphere');
+  if (!atmo) return;
+  var gauge = document.createElement('div');
+  gauge.className = 'depth-gauge';
+  gauge.setAttribute('aria-hidden', 'true');
+  gauge.textContent = '0 m · surface';
+  document.body.appendChild(gauge);
+  var t = 0;
+  function dive() {
+    t = 0;
+    var h = document.documentElement;
+    var max = (h.scrollHeight - h.clientHeight) || 1;
+    var f = Math.min(1, h.scrollTop / max);
+    atmo.style.setProperty('--depth', f.toFixed(3));
+    var m = Math.round(f * 60);
+    gauge.textContent = m === 0 ? '0 m · surface' : '−' + m + ' m';
+  }
+  window.addEventListener('scroll', function () { if (!t) t = requestAnimationFrame(dive); }, { passive: true });
+  dive();
+})();

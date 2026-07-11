@@ -471,3 +471,21 @@ body.menu-open .mobile-menu { opacity: 1; visibility: visible; transform: none; 
   .atmosphere, .grain, .site-header, .site-footer, .nav-toggle, .mobile-menu { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* ── SYED-CONCEPT · "Harbour Deeper" — the page descends ── */
+.atmosphere::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 30%, rgba(2, 6, 14, .9));
+  opacity: calc(var(--depth, 0) * .5);
+  transition: opacity .25s linear;
+}
+.depth-gauge {
+  position: fixed; left: 16px; bottom: 16px; z-index: 40; pointer-events: none;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px;
+  letter-spacing: .16em; color: var(--biolum, #2DD4BF); opacity: .5;
+}
+@media (max-width: 720px), print { .depth-gauge { display: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .atmosphere::before { animation: harbour-drift 90s linear infinite; }
+  @keyframes harbour-drift { to { background-position: 260px 0; } }
+}
